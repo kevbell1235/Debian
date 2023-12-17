@@ -1,0 +1,49 @@
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + Return
+	kitty
+
+super + q
+	i3-msg kill
+
+super + {1-9,0}
+	i3-msg workspace {1,2,3,4,5,6,7,8,9,10}
+
+super + alt + {1-9,0}
+        i3-msg workspace {11,12,13,14,15,16,17,18,19,20}
+
+super + control + {1-9,0}
+	i3-msg workspace {21,22,23,24,25,26,27,28,29,30}
+
+super + shift + {1-9,0}
+        i3-msg move container to  workspace number {1,2,3,4,5,6,7,8,9,10}
+
+super + ctrl + shift + {1-9,0}
+        i3-msg move container to  workspace number {21,22,23,24,25,26,27,28,29,30
+
+super + alt + shift + {1-9,0}
+        i3-msg move container to workspace number {11,12,13,14,15,16,17,18,19,20}
+
+super + f
+	i3-msg fullscreen toggle
+
+super + b
+	firefox
+
+super + d
+	rofi -show drun
+
+alt + f
+	ranger
+
+ctrl + super + atl + enter
+	rofi -show power-menu -modi power-menu:./rofi-power-menu
+
+printscreen
+	flameshot
+	
+
+# Logout
+super + alt + esc
+	xfce4-session-logout --logout --fast
