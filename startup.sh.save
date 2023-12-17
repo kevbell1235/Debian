@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Wait for i3wm to start
+sleep 2
+bash feh --randomize --bg-fill ~/Pictures/backgrounds/backgrounds/
+sleep 1
+bash ~/.config/polybar/launch.sh
+sleep 1
+# Launch Spotify on workspace 6
+i3-msg 'workspace 6; exec spotify'
+
+# Wait for Spotify to open
+sleep 1
+
+#i3-msg 'workspace 7; exec steam'
+#sleep 1
+# Launch btop on workspace 10
+i3-msg 'workspace 10; exec xfce4-terminal --command btop'
+
+# Wait for btop to open
+sleep 1
+
+# Launch htop on workspace 10
+i3-msg 'workspace 10; exec xfce4-terminal --command htop'
+
+sleep 1
+# launch workspace 1
+i3-msg 'workspace 1'
